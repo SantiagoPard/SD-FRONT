@@ -1,0 +1,75 @@
+.file-input-wrapper, .nohover  {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] , .nohover input[type="file"]{
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.file-input-label, .nohover  {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+    background-color: #e2e6ea;
+}
+
+.nohover:hover{
+    cursor: not-allowed;
+}
+
+.nohover{
+    background-color: rgba(128, 128, 128,0.3)
+}
+
+body {
+    background-color: azure;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.btn-create {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.table-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal-body textarea {
+    resize: none;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

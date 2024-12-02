@@ -1,0 +1,75 @@
+
+body {
+    /* background */
+        --s: 210px; 
+        --c1: #f7d2a1;
+        --c2: #05057e;
+        
+        --_g: 
+           var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+           var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+           #0000 96%;
+        background:
+          radial-gradient(50% 50% at 100% 0,var(--_g)),
+          radial-gradient(50% 50% at 0 100%,var(--_g)),
+          radial-gradient(50% 50%,var(--_g)),
+          radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+          var(--c1);
+        background-size: var(--s) var(--s);
+    
+    
+
+
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+
+}
+
+.form-container {
+    background: white;
+    border-radius: 10px;
+    padding: 50px 80px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form+p, form p {
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    left: -1000000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+input,
+button {
+    border-radius: 4px;
+    border: unset;
+    padding: 15px 30px;
+    font-size: large;
+}
+button{
+    background-color:#f7d2a1 ;
+   
+    font-weight: bold;
+    cursor: pointer;
+}
+.error{
+ color: rgb(255, 81, 81);
+}
+.escondido{
+    display: none;
+}
