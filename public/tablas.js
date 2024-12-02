@@ -1,7 +1,7 @@
 const tbody = document.getElementById("tablaInfo")
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const res = await fetch("http://localhost:4000/api/tabla", {
+    const res = await fetch("https://sd-back.onrender.com/api/tabla", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         correo=data.correoTabla
     }
     
-    const resMongo = await fetch("http://localhost:4000/api/tablasTodo",
+    const resMongo = await fetch("https://sd-back.onrender.com/api/tablasTodo",
         {
         method:"POST",
         headers:{
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 let UpDateIni = fecha.toLocaleString()
                 td3.innerText = UpDateIni
 
-           await fetch("http://localhost:4000/api/updatesTabla",
+           await fetch("https://sd-back.onrender.com/api/updatesTabla",
             {
             method:"POST",
             headers:{
@@ -124,7 +124,7 @@ function addRow() {
         console.log(UpDateIni)
         let correo = document.getElementById("correo").innerText
         console.log(correo)
-        await fetch("http://localhost:4000/api/addTabla",
+        await fetch("https://sd-back.onrender.com/api/addTabla",
             {
             method:"POST",
             headers:{

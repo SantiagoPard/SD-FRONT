@@ -3,7 +3,7 @@ const mensajeError = document.getElementsByClassName("error")[0];
 document.getElementById("ver-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
     console.log(e.target.children.code.value);
-    const res = await fetch("http://localhost:4000/api/verificacion",
+    const res = await fetch("https://sd-back.onrender.com/api/verificacion",
         {
         method:"POST",
         headers:{

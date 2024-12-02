@@ -5,7 +5,7 @@ document.getElementById("login-form").addEventListener("submit",async (e)=>{
     console.log(e.target.children.user.value);
    
 
-    const res = await fetch("http://localhost:4000/api/login",
+    const res = await fetch("https://sd-back.onrender.com/api/login",
         {
         method:"POST",
         headers:{
