@@ -9,50 +9,53 @@
     <link rel="stylesheet" href="/public/tablas.css">
     <title>Document</title>
 </head>
-<body >
+<body>
 
-    <h1 id="correo"></h1>
-    <button style="position:absolute; margin-left: 90vw;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear</button>
-    <table class="table table-success" style="width: 50vw;margin-left: 25vw; margin-top: 10vh; align-items: center; ">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">asunto</th>
-            <th scope="col">Fecha Creación</th>
-            <th scope="col">Fecha subida</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Acción</th>
-      
-          </tr>
-        </thead>
-        <tbody id="tablaInfo">
-      
-     
-        </tbody>
-      </table>
-<!-- Button trigger modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="container my-4">
+        <h1 id="correo" class="text-center mb-4">Correo</h1>
+        <button style="position: fixed; top: 20px; right: 20px;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear</button>
+        <div class="table-responsive">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Fecha Creación</th>
+                        <th scope="col">Fecha Subida</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Link Evidencia</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaInfo">
+                    <!-- Aquí se agregarán las filas dinámicamente -->
+                </tbody>
+            </table>
         </div>
-        <div class="modal-body">
-          <form action="" id="tarea-form">
-            <label for="asunto">asunto</label>
-            <textarea required type="text" name="asunto" id="asunto" style="resize: none; min-width: 100%; max-width: 100%; min-height: 36px; field-sizing: content; "></textarea>
-          
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" onclick="addRow()">Understood</button>
-        </div>
-      </form>
-      </div>
     </div>
-  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear nueva tarea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="tarea-form">
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <textarea required name="asunto" id="asunto" class="form-control" rows="3" style="resize: none;"></textarea>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" onclick="addRow()">Crear</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
