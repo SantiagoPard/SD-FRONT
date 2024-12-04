@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         file: fileBase64,
                         fileName: selectedFile.name,
                         mimeType: mimeType,
-                        // Enviar el ID de la carpeta aquí
+                        correo : correo
                     }),
                 });
 
